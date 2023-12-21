@@ -92,6 +92,9 @@ export const FALLBACK_URLS = {
     // "Safe" URLs
     `https://alfajores-forno.celo-testnet.org`,
   ],
+  [ChainId.BNB_TESTNET]: [
+    "https://data-seed-prebsc-2-s2.bnbchain.org:8545"
+  ],
   [ChainId.BNB]: [
     // "Safe" URLs
     'https://endpoints.omniatech.io/v1/bsc/mainnet/public',
@@ -154,6 +157,9 @@ export const RPC_URLS = {
   [ChainId.CELO]: FALLBACK_URLS[ChainId.CELO],
   [ChainId.CELO_ALFAJORES]: FALLBACK_URLS[ChainId.CELO_ALFAJORES],
   [ChainId.BNB]: [QUICKNODE_BNB_RPC_URL, ...FALLBACK_URLS[ChainId.BNB]],
+  [ChainId.BNB_TESTNET]: [
+    "https://data-seed-prebsc-2-s2.bnbchain.org:8545"
+  ],
   [ChainId.AVALANCHE]: [`https://avalanche-mainnet.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[ChainId.AVALANCHE]],
   [ChainId.BASE]: [`https://base-mainnet.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[ChainId.BASE]],
 }

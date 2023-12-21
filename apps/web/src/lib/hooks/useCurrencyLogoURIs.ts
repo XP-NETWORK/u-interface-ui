@@ -40,6 +40,7 @@ export function getNativeLogoURI(chainId: ChainId = ChainId.MAINNET): string {
     case ChainId.POLYGON:
     case ChainId.POLYGON_MUMBAI:
       return MaticLogo
+    case ChainId.BNB_TESTNET:
     case ChainId.BNB:
       return BnbLogo
     case ChainId.CELO:

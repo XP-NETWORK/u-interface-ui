@@ -28,6 +28,7 @@ export const RPC_PROVIDERS: { [key in SupportedInterfaceChain]: StaticJsonRpcPro
   [ChainId.CELO]: providerFactory(ChainId.CELO),
   [ChainId.CELO_ALFAJORES]: providerFactory(ChainId.CELO_ALFAJORES),
   [ChainId.BNB]: providerFactory(ChainId.BNB),
+  [ChainId.BNB_TESTNET]: providerFactory(ChainId.BNB),
   [ChainId.AVALANCHE]: providerFactory(ChainId.AVALANCHE),
   [ChainId.BASE]: providerFactory(ChainId.BASE),
 }
@@ -45,6 +46,7 @@ export const DEPRECATED_RPC_PROVIDERS: { [key in SupportedInterfaceChain]: AppSt
   [ChainId.CELO]: providerFactory(ChainId.CELO),
   [ChainId.CELO_ALFAJORES]: providerFactory(ChainId.CELO_ALFAJORES),
   [ChainId.BNB]: providerFactory(ChainId.BNB),
+  [ChainId.BNB_TESTNET]: providerFactory(ChainId.BNB),
   [ChainId.AVALANCHE]: providerFactory(ChainId.AVALANCHE),
   [ChainId.BASE]: providerFactory(ChainId.BASE),
 }

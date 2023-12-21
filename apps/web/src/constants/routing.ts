@@ -123,7 +123,7 @@ export const COMMON_BASES: ChainCurrencyList = {
   [ChainId.CELO_ALFAJORES]: [nativeOnChain(ChainId.CELO_ALFAJORES), CUSD_CELO_ALFAJORES, CEUR_CELO_ALFAJORES],
 
   [ChainId.BNB]: [nativeOnChain(ChainId.BNB), DAI_BSC, USDC_BSC, USDT_BSC, ETH_BSC, BTC_BSC, BUSD_BSC],
-
+  [ChainId.BNB_TESTNET]: [nativeOnChain(ChainId.BNB)],
   [ChainId.AVALANCHE]: [
     nativeOnChain(ChainId.AVALANCHE),
     DAI_AVALANCHE,

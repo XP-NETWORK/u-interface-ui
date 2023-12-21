@@ -93,6 +93,7 @@ export default function RadialGradientByChainUpdater(): null {
         backgroundRadialGradientElement.style.background = darkMode ? celoDarkGradient : celoLightGradient
         break
       }
+      case ChainId.BNB_TESTNET:
       case ChainId.BNB: {
         setBackground(backgroundResetStyles)
         const bscLightGradient =

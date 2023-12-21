@@ -273,9 +273,11 @@ const SwapCurrencyInputPanel = forwardRef<HTMLInputElement, SwapCurrencyInputPan
     },
     ref
   ) => {
+
     const [modalOpen, setModalOpen] = useState(false)
     const { account, chainId } = useWeb3React()
     const selectedCurrencyBalance = useCurrencyBalance(account ?? undefined, currency ?? undefined)
+    console.log({hideBalance ,currency ,selectedCurrencyBalance, account})
     const theme = useTheme()
     const { formatCurrencyAmount } = useFormatter()
 

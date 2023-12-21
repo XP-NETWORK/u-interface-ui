@@ -31,8 +31,10 @@ export function useNativeCurrencyBalances(uncheckedAddresses?: (string | undefin
         : [],
     [uncheckedAddresses]
   )
-
+  //@TODO find this not working
+  console.log({multicallContract, validAddressInputs})
   const results = useSingleContractMultipleData(multicallContract, 'getEthBalance', validAddressInputs)
+  console.log({results})
 
   return useMemo(
     () =>
@@ -120,12 +122,13 @@ export function useCurrencyBalances(
     () => currencies?.filter((currency): currency is Token => currency?.isToken ?? false) ?? [],
     [currencies]
   )
-
+  
   const { chainId } = useWeb3React()
   const tokenBalances = useTokenBalances(account, tokens)
   const containsETH: boolean = useMemo(() => currencies?.some((currency) => currency?.isNative) ?? false, [currencies])
   const ethBalance = useNativeCurrencyBalances(useMemo(() => (containsETH ? [account] : []), [containsETH, account]))
-
+  console.log("useCurrencyBalances", {account, currencies, containsETH, ethBalance})
+  
   return useMemo(
     () =>
       currencies?.map((currency) => {

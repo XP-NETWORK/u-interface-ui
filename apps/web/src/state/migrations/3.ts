@@ -22,6 +22,7 @@ export const migration3 = (state: PersistAppStateV3 | undefined) => {
       [ChainId.ARBITRUM_GOERLI]: '0x8FB1E3fC51F3b789dED7557E680551d93Ea9d892',
       [ChainId.AVALANCHE]: '0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664',
       [ChainId.POLYGON]: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
+      //@BNBTESTNET not added here
       [ChainId.POLYGON_MUMBAI]: '0xe11a86849d99f524cac3e7a0ec1241828e332c62',
     }
     for (const [chainId, address] of Object.entries(USDCe_ADDRESSES)) {

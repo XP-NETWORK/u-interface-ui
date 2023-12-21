@@ -89,6 +89,7 @@ export const CHAIN_ID_TO_BACKEND_NAME: { [key: number]: InterfaceGqlChain } = {
   [ChainId.OPTIMISM]: Chain.Optimism,
   [ChainId.OPTIMISM_GOERLI]: Chain.Optimism,
   [ChainId.BNB]: Chain.Bnb,
+  [ChainId.BNB_TESTNET]: Chain.Bnb,
   [ChainId.AVALANCHE]: Chain.Avalanche,
   [ChainId.BASE]: Chain.Base,
 }

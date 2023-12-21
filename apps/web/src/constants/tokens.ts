@@ -338,6 +338,7 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     'Celo native asset'
   ),
   [ChainId.BNB]: new Token(ChainId.BNB, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'),
+  [ChainId.BNB_TESTNET]: new Token(ChainId.BNB_TESTNET, '0x4054402E8FaF7D6e194be714970646dc661AabC5', 18, 'WBNB', 'Wrapped BNB'),
   [ChainId.AVALANCHE]: new Token(
     ChainId.AVALANCHE,
     '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',
@@ -385,7 +386,7 @@ class PolygonNativeCurrency extends NativeCurrency {
 }
 
 export function isBsc(chainId: number): chainId is ChainId.BNB {
-  return chainId === ChainId.BNB
+  return chainId === ChainId.BNB || chainId === ChainId.BNB_TESTNET
 }
 
 class BscNativeCurrency extends NativeCurrency {
@@ -468,6 +469,7 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in ChainId]?: s
     [ChainId.OPTIMISM]: USDC_OPTIMISM.address,
     [ChainId.OPTIMISM_GOERLI]: USDC_OPTIMISM_GOERLI.address,
     [ChainId.POLYGON]: USDC_POLYGON.address,
+    // @BNBTESTNET not added here
     [ChainId.POLYGON_MUMBAI]: USDC_POLYGON_MUMBAI.address,
     [ChainId.BNB]: USDC_BSC.address,
     [ChainId.BASE]: USDC_BASE.address,

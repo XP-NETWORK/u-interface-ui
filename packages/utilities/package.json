@@ -10,7 +10,7 @@
     "@sentry/react-native": "5.5.0",
     "@testing-library/react-hooks": "7.0.2",
     "@uniswap/analytics-events": "2.28.0",
-    "@uniswap/sdk-core": "4.0.7",
+    "@uniswap/sdk-core": "https://github.com/XP-NETWORK/u-sdk-core.git",
     "dayjs": "1.11.7",
     "jsbi": "3.2.5",
     "react": "18.2.0",
