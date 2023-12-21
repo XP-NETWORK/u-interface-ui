@@ -134,14 +134,192 @@ export const routingApi = createApi({
           }
 
           const baseURL = gatewayDNSUpdateEnabled ? UNISWAP_GATEWAY_DNS_URL : UNISWAP_API_URL
-          const response = await fetch({
-            method: 'POST',
-            url: `${baseURL}/quote`,
-            body: JSON.stringify(requestBody),
-            headers: {
-              'x-request-source': 'uniswap-web',
-            },
-          })
+          // const response = await fetch({
+          //   method: 'POST',
+          //   url: `${baseURL}/quote`,
+          //   body: JSON.stringify(requestBody),
+          //   headers: {
+          //     'x-request-source': 'uniswap-web',
+          //   },
+          // })
+
+          // const rs = {
+          //   "routing": "CLASSIC",
+          //   "quote": {
+          //     "methodParameters": {
+          //       "calldata": "0x24856bc3000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000010000000000000000000000000067081bd856e29d7d7b3028c34afb331fa6b3186e0000000000000000000000000000000000000000000000000de0b6b3a764000000000000000000000000000000000000000000000000000051fd90f6d670ee3700000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002bdb2a42f40158b1cb29703e2a95a6fa3094294f050001f4c6402f8ddd5427a114376c50926a17fb55498093000000000000000000000000000000000000000000",
+          //       "value": "0x00",
+          //       "to": "0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD"
+          //     },
+          //     "blockNumber": "43826765",
+          //     "amount": "1000000000000000000",
+          //     "amountDecimals": "1",
+          //     "quote": "5937577864394108776",
+          //     "quoteDecimals": "5.937577864394108776",
+          //     "quoteGasAdjusted": "5937577864394108776",
+          //     "quoteGasAdjustedDecimals": "5.937577864394108776",
+          //     "gasUseEstimateQuote": "0",
+          //     "gasUseEstimateQuoteDecimals": "0",
+          //     "gasUseEstimate": "128000",
+          //     "gasUseEstimateUSD": "0",
+          //     "simulationStatus": "UNATTEMPTED",
+          //     "simulationError": false,
+          //     "gasPriceWei": "2947928410",
+          //     "route": [
+          //       [
+          //         {
+          //           "type": "v3-pool",
+          //           "address": "0x6dD98E2175F5f2c7D78F2f3C99B2AbaF00a15683",
+          //           "tokenIn": {
+          //             "chainId": 97,
+          //             "decimals": "18",
+          //             "address": "0xc84a1aeb001565Ea249fF521704612aC73cF7a09",
+          //             "symbol": "MS0"
+          //           },
+          //           "tokenOut": {
+          //             "chainId": 97,
+          //             "decimals": "18",
+          //             "address": "0x49dF31a568bec15AFEE978578Eec893Ac9a19b68",
+          //             "symbol": "MS1"
+          //           },
+          //           "fee": "500",
+          //           "liquidity": "4624415554576876951",
+          //           "sqrtRatioX96": "25052894984021797146183221489",
+          //           "tickCurrent": "-23028",
+          //           "amountIn": "1000000000000000000",
+          //           "amountOut": "5937577864394108776"
+          //         }
+          //       ]
+          //     ],
+          //     "routeString": "[V3] 100.00% = MS0 -- 0.05% [0x6dD98E2175F5f2c7D78F2f3C99B2AbaF00a15683] --> MS1",
+          //     "quoteId": "810cf411-14f8-4bc1-a6ed-c6dd0f783a90",
+          //     "hitsCachedRoutes": true,
+          //     "portionBips": 0,
+          //     "portionAmount": "0",
+          //     "portionAmountDecimals": "0",
+          //     "quoteGasAndPortionAdjusted": "5937577864394108776",
+          //     "quoteGasAndPortionAdjustedDecimals": "5.937577864394108776",
+          //     "requestId": "ecf99a2b-f7dc-4170-9a2c-519426374b3b",
+          //     "tradeType": "EXACT_INPUT",
+          //     "slippage": 0.5
+          //   },
+          //   "requestId": "ecf99a2b-f7dc-4170-9a2c-519426374b3b",
+          //   "allQuotes": [
+          //     {
+          //       "routing": "CLASSIC",
+          //       "quote": {
+          //         "methodParameters": {
+          //           "calldata": "0x24856bc3000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000010000000000000000000000000067081bd856e29d7d7b3028c34afb331fa6b3186e0000000000000000000000000000000000000000000000000de0b6b3a764000000000000000000000000000000000000000000000000000051fd90f6d670ee3700000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002bdb2a42f40158b1cb29703e2a95a6fa3094294f050001f4c6402f8ddd5427a114376c50926a17fb55498093000000000000000000000000000000000000000000",
+          //           "value": "0x00",
+          //           "to": "0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD"
+          //         },
+          //         "blockNumber": "43826765",
+          //         "amount": "1000000000000000000",
+          //         "amountDecimals": "1",
+          //         "quote": "5937577864394108776",
+          //         "quoteDecimals": "5.937577864394108776",
+          //         "quoteGasAdjusted": "5937577864394108776",
+          //         "quoteGasAdjustedDecimals": "5.937577864394108776",
+          //         "gasUseEstimateQuote": "0",
+          //         "gasUseEstimateQuoteDecimals": "0",
+          //         "gasUseEstimate": "128000",
+          //         "gasUseEstimateUSD": "0",
+          //         "simulationStatus": "UNATTEMPTED",
+          //         "simulationError": false,
+          //         "gasPriceWei": "2947928410",
+          //         "route": [
+          //           [
+          //             {
+          //               "type": "v3-pool",
+          //               "address": "0x6dD98E2175F5f2c7D78F2f3C99B2AbaF00a15683",
+          //               "tokenIn": {
+          //                 "chainId": 97,
+          //                 "decimals": "18",
+          //                 "address": "0xc84a1aeb001565Ea249fF521704612aC73cF7a09",
+          //                 "symbol": "MS0"
+          //               },
+          //               "tokenOut": {
+          //                 "chainId": 97,
+          //                 "decimals": "18",
+          //                 "address": "0x49dF31a568bec15AFEE978578Eec893Ac9a19b68",
+          //                 "symbol": "MS1"
+          //               },
+          //               "fee": "500",
+          //               "liquidity": "4624415554576876951",
+          //               "sqrtRatioX96": "25052894984021797146183221489",
+          //               "tickCurrent": "-23028",
+          //               "amountIn": "1000000000000000000",
+          //               "amountOut": "5937577864394108776"
+          //             }
+          //           ]
+          //         ],
+          //         "routeString": "[V3] 100.00% = MS0 -- 0.05% [0x6dD98E2175F5f2c7D78F2f3C99B2AbaF00a15683] --> MS1",
+          //         "quoteId": "810cf411-14f8-4bc1-a6ed-c6dd0f783a90",
+          //         "hitsCachedRoutes": true,
+          //         "portionBips": 0,
+          //         "portionAmount": "0",
+          //         "portionAmountDecimals": "0",
+          //         "quoteGasAndPortionAdjusted": "5937577864394108776",
+          //         "quoteGasAndPortionAdjustedDecimals": "5.937577864394108776",
+          //         "requestId": "ecf99a2b-f7dc-4170-9a2c-519426374b3b",
+          //         "tradeType": "EXACT_INPUT",
+          //         "slippage": 0.5
+          //       }
+          //     }
+          //   ]
+          // }
+
+          const rs = {
+            "blockNumber": "43834197",
+            "amount": "1000000000000000000",
+            "amountDecimals": "1",
+            "quote": "2508452080975074318",
+            "quoteDecimals": "2.508452080975074318",
+            "quoteGasAdjusted": "2508452080975074318",
+            "quoteGasAdjustedDecimals": "2.508452080975074318",
+            "gasUseEstimateQuote": "0",
+            "gasUseEstimateQuoteDecimals": "0",
+            "gasUseEstimate": "128000",
+            "gasUseEstimateUSD": "0",
+            "simulationStatus": "UNATTEMPTED",
+            "simulationError": false,
+            "gasPriceWei": "27152720638",
+            "route": [
+              [
+                {
+                  "type": "v3-pool",
+                  "address": "0x6dD98E2175F5f2c7D78F2f3C99B2AbaF00a15683",
+                  "tokenIn": {
+                    "chainId": 97,
+                    "decimals": "18",
+                    "address": "0xc84a1aeb001565Ea249fF521704612aC73cF7a09",
+                    "symbol": "MS0"
+                  },
+                  "tokenOut": {
+                    "chainId": 97,
+                    "decimals": "18",
+                    "address": "0x49dF31a568bec15AFEE978578Eec893Ac9a19b68",
+                    "symbol": "MS1"
+                  },
+                  "fee": "500",
+                  "liquidity": "4624415554576876951",
+                  "sqrtRatioX96": "42176907196685667333617860271",
+                  "tickCurrent": "-12610",
+                  "amountIn": "1000000000000000000",
+                  "amountOut": "2508452080975074318"
+                }
+              ]
+            ],
+            "routeString": "[V3] 100.00% = MS0 -- 0.05% [0x6dD98E2175F5f2c7D78F2f3C99B2AbaF00a15683] --> MS1",
+            "quoteId": "f73de",
+            "hitsCachedRoutes": true
+          }
+          
+          const response: { error: any, data: any } = {
+            error: undefined,
+            data: rs
+          }
+          console.log({ response })
 
           if (response.error) {
             try {
@@ -171,8 +349,7 @@ export const routingApi = createApi({
           return { data: { ...tradeResult, latencyMs: getQuoteLatencyMeasure(quoteStartMark).duration } }
         } catch (error: any) {
           console.warn(
-            `GetQuote failed on Unified Routing API, falling back to client: ${
-              error?.message ?? error?.detail ?? error
+            `GetQuote failed on Unified Routing API, falling back to client: ${error?.message ?? error?.detail ?? error
             }`
           )
         }
