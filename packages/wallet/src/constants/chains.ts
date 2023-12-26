@@ -33,6 +33,7 @@ export enum ChainId {
   Optimism = 10,
   Polygon = 137,
   PolygonMumbai = 80001,
+  BnbTestnet = 97,
   Bnb = 56,
 }
 
@@ -63,6 +64,7 @@ export const L2_CHAIN_IDS = [
   ChainId.Polygon,
   ChainId.PolygonMumbai,
   ChainId.Bnb,
+  ChainId.BnbTestnet
 ] as const
 
 // Renamed from SupportedL2ChainId in web app
@@ -238,6 +240,34 @@ export const CHAIN_INFO: ChainInfo = {
     },
     rpcUrls: { [RPCType.Public]: config.quicknodeBnbRpcUrl },
   },
+  [ChainId.BnbTestnet]: {
+    blockWaitMsBeforeWarning: 600000,
+    bridge: 'https://www.bnbchain.org/bridge',
+    docs: 'https://www.bnbchain.org/',
+    explorer: {
+      name: 'TestnetBscScan',
+      url: 'https://testnet.bscscan.com/',
+      logoLight: Logos.BscscanLogoLight,
+      logoDark: Logos.BscscanLogoDark,
+    },
+    infoLink: 'https://info.uniswap.org/#/bnb',
+    label: 'BNB TESTNET',
+    logo: BNB_LOGO,
+    nativeCurrency: {
+      name: 'Binance Coin',
+      symbol: 'BNB',
+      decimals: 18,
+      address: '0xB8c77482e45F1F44dE1745F52C74426C631bDD52',
+    },
+    wrappedNativeCurrency: {
+      name: 'Wrapped BNB',
+      symbol: 'WBNB',
+      decimals: 18,
+      address: '0x4054402E8FaF7D6e194be714970646dc661AabC5',
+    },
+    rpcUrls: { [RPCType.Public]: config.quicknodeBnbRpcUrl },
+  },
+  
   [ChainId.Optimism]: {
     blockWaitMsBeforeWarning: 1200000, // 20 minutes
     bridge: 'https://gateway.optimism.io/',
