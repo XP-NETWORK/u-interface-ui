@@ -15284,10 +15284,10 @@ __metadata:
     "@uniswap/redux-multicall": 1.1.8
     "@uniswap/router-sdk": 1.7.1
     "@uniswap/sdk-core": "https://github.com/XP-NETWORK/u-sdk-core.git#4c2cf95f1fda52b96ef99a7cc0791bcb70394c94"
-    "@uniswap/smart-order-router": "https://github.com/XP-NETWORK/u-smart-order-router.git#06ba5372235a6613ffd117ae95cbe415c48a118b"
+    "@uniswap/smart-order-router": "https://github.com/XP-NETWORK/u-smart-order-router.git#6b1cf09a4250f9f8d675a7f22e83d493b76548a0"
     "@uniswap/token-lists": 1.0.0-beta.33
     "@uniswap/uniswapx-sdk": 1.4.1
-    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-universal-router-sdk.git#2a8396ec6c3c7d3beb6ea7cc387780b07f997042"
+    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-universal-router-sdk#235ab3b99e80471e3e92cd63d439fd7cb5fe3160"
     "@uniswap/v2-core": 1.0.1
     "@uniswap/v2-periphery": 1.1.0-beta.0
     "@uniswap/v2-sdk": 3.2.3
@@ -15530,7 +15530,7 @@ __metadata:
     "@uniswap/permit2-sdk": 1.2.0
     "@uniswap/router-sdk": 1.7.1
     "@uniswap/sdk-core": "https://github.com/XP-NETWORK/u-sdk-core.git#4c2cf95f1fda52b96ef99a7cc0791bcb70394c94"
-    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-universal-router-sdk.git#2a8396ec6c3c7d3beb6ea7cc387780b07f997042"
+    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-universal-router-sdk#235ab3b99e80471e3e92cd63d439fd7cb5fe3160"
     "@uniswap/v2-sdk": 3.2.3
     "@uniswap/v3-sdk": 3.10.0
     "@walletconnect/react-native-compat": 2.10.1
@@ -15716,9 +15716,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uniswap/smart-order-router@https://github.com/XP-NETWORK/u-smart-order-router.git#06ba5372235a6613ffd117ae95cbe415c48a118b":
+"@uniswap/smart-order-router@https://github.com/XP-NETWORK/u-smart-order-router.git#6b1cf09a4250f9f8d675a7f22e83d493b76548a0":
   version: 3.20.0
-  resolution: "@uniswap/smart-order-router@https://github.com/XP-NETWORK/u-smart-order-router.git#commit=06ba5372235a6613ffd117ae95cbe415c48a118b"
+  resolution: "@uniswap/smart-order-router@https://github.com/XP-NETWORK/u-smart-order-router.git#commit=6b1cf09a4250f9f8d675a7f22e83d493b76548a0"
   dependencies:
     "@uniswap/default-token-list": ^11.2.0
     "@uniswap/permit2-sdk": ^1.2.0
@@ -15727,7 +15727,7 @@ __metadata:
     "@uniswap/swap-router-contracts": ^1.3.0
     "@uniswap/token-lists": ^1.0.0-beta.31
     "@uniswap/universal-router": ^1.0.1
-    "@uniswap/universal-router-sdk": ^1.5.8
+    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-universal-router-sdk#235ab3b99e80471e3e92cd63d439fd7cb5fe3160"
     "@uniswap/v2-sdk": ^3.2.3
     "@uniswap/v3-sdk": ^3.10.0
     async-retry: ^1.3.1
@@ -15744,7 +15744,7 @@ __metadata:
     stats-lite: ^2.2.0
   peerDependencies:
     jsbi: ^3.2.5
-  checksum: 91d3919cc02e3ab4ea609f6d2fc5076fb4f6ce56f33fae3bc429896f03c41e89f0a42c90148a03d6e1b04324c6f6b9c96cbf861042b5251672c59376ec728013
+  checksum: 300f7d6e64e8843cbe0f12b07afd09acde366157d9dc55fd239d52a1897f52c1023e1d3a2264eb734c2c24f70425a75999c31031d2a4b36fb954ea96c5d0fd3c
   languageName: node
   linkType: hard
 
@@ -15782,9 +15782,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uniswap/universal-router-sdk@https://github.com/XP-NETWORK/u-universal-router-sdk.git#2a8396ec6c3c7d3beb6ea7cc387780b07f997042":
+"@uniswap/universal-router-sdk@https://github.com/XP-NETWORK/u-smart-order-router.git#6b1cf09a4250f9f8d675a7f22e83d493b76548a0":
+  version: 3.20.0
+  resolution: "@uniswap/universal-router-sdk@https://github.com/XP-NETWORK/u-smart-order-router.git#commit=6b1cf09a4250f9f8d675a7f22e83d493b76548a0"
+  dependencies:
+    "@uniswap/default-token-list": ^11.2.0
+    "@uniswap/permit2-sdk": ^1.2.0
+    "@uniswap/router-sdk": ^1.6.0
+    "@uniswap/sdk-core": "https://github.com/XP-NETWORK/u-sdk-core.git#4c2cf95f1fda52b96ef99a7cc0791bcb70394c94"
+    "@uniswap/swap-router-contracts": ^1.3.0
+    "@uniswap/token-lists": ^1.0.0-beta.31
+    "@uniswap/universal-router": ^1.0.1
+    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-universal-router-sdk#235ab3b99e80471e3e92cd63d439fd7cb5fe3160"
+    "@uniswap/v2-sdk": ^3.2.3
+    "@uniswap/v3-sdk": ^3.10.0
+    async-retry: ^1.3.1
+    await-timeout: ^1.1.1
+    axios: ^0.21.1
+    bunyan: ^1.8.15
+    bunyan-blackhole: ^1.1.1
+    ethers: ^5.7.2
+    graphql: ^15.5.0
+    graphql-request: ^3.4.0
+    lodash: ^4.17.21
+    mnemonist: ^0.38.3
+    node-cache: ^5.1.2
+    stats-lite: ^2.2.0
+  peerDependencies:
+    jsbi: ^3.2.5
+  checksum: cf7a3a6eb836baf00ea89a43de8e6e435d408aa224fcf7125e000f98f904c03b1538f0ef625c6ad3874055b51cbde25efbd20118a2c5e20f187065c43d020dca
+  languageName: node
+  linkType: hard
+
+"@uniswap/universal-router-sdk@https://github.com/XP-NETWORK/u-universal-router-sdk#235ab3b99e80471e3e92cd63d439fd7cb5fe3160":
   version: 2.0.2
-  resolution: "@uniswap/universal-router-sdk@https://github.com/XP-NETWORK/u-universal-router-sdk.git#commit=2a8396ec6c3c7d3beb6ea7cc387780b07f997042"
+  resolution: "@uniswap/universal-router-sdk@https://github.com/XP-NETWORK/u-universal-router-sdk.git#commit=235ab3b99e80471e3e92cd63d439fd7cb5fe3160"
   dependencies:
     "@uniswap/permit2-sdk": ^1.2.0
     "@uniswap/router-sdk": ^1.6.0
@@ -15794,11 +15826,11 @@ __metadata:
     "@uniswap/v3-sdk": ^3.10.0
     bignumber.js: ^9.0.2
     ethers: ^5.3.1
-  checksum: 6776235cb4b0a9cfa05d38e896e041191e6c9f5aef2dcaa854de040e491c7b0d340620013fd5156b8a91f5b88248c476d7092c9d722888a802d3a069beb98567
+  checksum: 78d75c5f3106d0db9c7267eb49bd91402cd74ee32096c9c95285b0783ed6d1b76d97608d603e8a3e96d819df1bf785dda94a8927d65bbd6d7094e543ad8033f5
   languageName: node
   linkType: hard
 
-"@uniswap/universal-router-sdk@npm:^1.5.4, @uniswap/universal-router-sdk@npm:^1.5.8":
+"@uniswap/universal-router-sdk@npm:^1.5.4":
   version: 1.5.8
   resolution: "@uniswap/universal-router-sdk@npm:1.5.8"
   dependencies:
@@ -46746,7 +46778,7 @@ __metadata:
     "@types/react": ^18.0.15
     "@typescript-eslint/eslint-plugin": 5.59.2
     "@uniswap/sdk-core": "https://github.com/XP-NETWORK/u-sdk-core.git#4c2cf95f1fda52b96ef99a7cc0791bcb70394c94"
-    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-universal-router-sdk.git#2a8396ec6c3c7d3beb6ea7cc387780b07f997042"
+    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-smart-order-router.git#6b1cf09a4250f9f8d675a7f22e83d493b76548a0"
     concurrently: ^8.0.1
     danger: 11.2.6
     dotenv-cli: ^7.0.0
@@ -47731,7 +47763,7 @@ __metadata:
     "@uniswap/permit2-sdk": 1.2.0
     "@uniswap/router-sdk": 1.7.1
     "@uniswap/sdk-core": "https://github.com/XP-NETWORK/u-sdk-core.git#4c2cf95f1fda52b96ef99a7cc0791bcb70394c94"
-    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-universal-router-sdk.git#2a8396ec6c3c7d3beb6ea7cc387780b07f997042"
+    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-universal-router-sdk#235ab3b99e80471e3e92cd63d439fd7cb5fe3160"
     "@uniswap/v2-sdk": 3.2.3
     "@uniswap/v3-sdk": 3.10.0
     apollo-link-rest: 0.9.0

@@ -17,7 +17,7 @@
     "@types/react": "^18.0.15",
     "@typescript-eslint/eslint-plugin": "5.59.2",
     "@uniswap/sdk-core": "https://github.com/XP-NETWORK/u-sdk-core.git#4c2cf95f1fda52b96ef99a7cc0791bcb70394c94",
-    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-smart-order-router.git#06ba5372235a6613ffd117ae95cbe415c48a118b",
+    "@uniswap/universal-router-sdk": "https://github.com/XP-NETWORK/u-smart-order-router.git#6b1cf09a4250f9f8d675a7f22e83d493b76548a0",
     "concurrently": "^8.0.1",
     "danger": "11.2.6",
     "dotenv-cli": "^7.0.0",
